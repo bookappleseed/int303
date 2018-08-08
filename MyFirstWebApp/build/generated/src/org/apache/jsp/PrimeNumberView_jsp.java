@@ -58,12 +58,14 @@ public final class PrimeNumberView_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("            <input type=\"submit\" value=\"OK\"/>\n");
       out.write("        </form>\n");
       out.write("        <hr>\n");
+      out.write("        ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pn.primeNumber}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\n");
       out.write("        <h4>");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pn.number}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write('i');
-      out.write('s');
+      out.write(" is ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pn.primeNumber?\"\":\"not\"}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</h4>\n");
+      out.write(" Prime Number</h4>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

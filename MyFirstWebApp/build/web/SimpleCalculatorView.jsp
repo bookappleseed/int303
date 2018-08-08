@@ -12,7 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Result::</h1><hr>
+        <h1>Result::</h1>
+        <a href="index.html">Home</a>
+        <hr>
         <table>
             <tr>
                 <td>x</td>

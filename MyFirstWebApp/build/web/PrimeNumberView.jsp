@@ -12,13 +12,16 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Prime Number Application::</h1><hr>
+        <h1>Prime Number Application::</h1>
+         <a href="index.html">Home</a>
+        <hr>
         <form action="PrimeNumber" method="post">
             Please Enter Number:
             <input type="number" name="number" required min="2"/>
             <input type="submit" value="OK"/>
         </form>
         <hr>
-        <h4>${pn.number}is${pn.primeNumber?"":"not"}</h4>
+        ${pn.primeNumber}
+        <h4>${pn.number} is ${pn.primeNumber?"":"not"} Prime Number</h4>
     </body>
 </html>

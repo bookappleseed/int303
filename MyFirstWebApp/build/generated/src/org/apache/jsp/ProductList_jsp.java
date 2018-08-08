@@ -64,7 +64,7 @@ public final class ProductList_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <body>\n");
       out.write("        <h1>Product List ::</h1><hr>\n");
       out.write("        <table>\n");
-      out.write("            <thead>//table head\n");
+      out.write("            <thead>\n");
       out.write("            <th>No</th>\n");
       out.write("            <th>Product Code</th>\n");
       out.write("            <th>Product Name</th>\n");
@@ -110,6 +110,10 @@ public final class ProductList_jsp extends org.apache.jasper.runtime.HttpJspBase
         do {
           out.write("\n");
           out.write("                <tr>\n");
+          out.write("                    \n");
+          out.write("                    <td><img src=\"model-images/");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${p.productCode}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write(".jpg\" width=\"120\">\"</td>\n");
           out.write("                    <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${vs.count}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</td>\n");

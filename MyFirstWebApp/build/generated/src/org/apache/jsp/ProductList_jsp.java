@@ -58,12 +58,15 @@ public final class ProductList_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
+      out.write("        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>JSP Page</title>\n");
+      out.write("        \n");
+      out.write("\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
       out.write("        <h1>Product List ::</h1><hr>\n");
-      out.write("        <table>\n");
+      out.write("        <table class=\"table table-hover table-dark\">\n");
       out.write("            <thead>\n");
       out.write("            <th>No</th>\n");
       out.write("            <th>Product Code</th>\n");

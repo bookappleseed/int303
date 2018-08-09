@@ -26,10 +26,18 @@
     </head>
     <body>
         <div class="container">
-            <h1>Product List ::</h1><hr>
-            <table id="example">
+            <table class="table"
+                   <tr>       
+                    <td><h1>Product List ::</h1></td>
+                    <td>
+                        <a href="ShowCart">YourCart:(${cart.totalQuantity})</a>
+                    </td>
+                </tr>
+                <hr>
+            </table>
+            <table id="example" class="table">
                 <thead>
-                    
+
                 <th>Image</th>
                 <th>No</th>
                 <th>Product Code</th>
@@ -37,6 +45,7 @@
                 <th>Product Line</th>
                 <th>Scale</th>
                 <th>Price</th>
+                <th>Add To Cart</th>
                 </thead>
                 <c:forEach items="${products}" var="p" varStatus="vs">
                     <tr>
@@ -48,6 +57,16 @@
                         <td>${p.productLine}</td>
                         <td>${p.productScale}</td>
                         <td>${p.msrp}</td>
+
+                        <td>
+                            <form action="AddItemToCart" method="post">
+                                <input type="hidden" value="${p.productCode}" name="productCode"/>
+                                <input type="submit" value="Add To Cart"/>
+                            </form> 
+                            <a href="AddItemToCart?productCode=${p.productCode}">
+                                <input type="button" value="Add To Cart"/>
+                            </a>
+                        </td>
                     </tr>
                 </c:forEach>
             </table>

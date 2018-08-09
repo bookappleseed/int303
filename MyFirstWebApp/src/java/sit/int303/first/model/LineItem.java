@@ -11,10 +11,32 @@ import sit.int303.mockup.model.Product;
  *
  * @author INT303
  */
-class LineItem {
+public class LineItem {
     private Product product;
     private double saleprice;
     private int quantity;
+
+    public LineItem() {
+    }
+
+    public LineItem(Product product) {
+        this(product,1);
+    }
+
+    
+    public LineItem(Product product, int quantity) {
+        this.product = product;
+        this.quantity = quantity;
+        this.saleprice=product.getMsrp();
+    }
+    
+    public double getTotalPrice(){
+        return this.quantity*this.saleprice;
+        
+    }
+    
+    
+    
 
     public Product getProduct() {
         return product;

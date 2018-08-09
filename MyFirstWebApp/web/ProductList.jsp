@@ -9,35 +9,53 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        
+        <link rel="stylesheet" 
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" 
+              href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+
 
     </head>
     <body>
-        <h1>Product List ::</h1><hr>
-        <table class="table table-hover table-dark">
-            <thead>
-            <th>No</th>
-            <th>Product Code</th>
-            <th>Product Name</th>
-            <th>Product Line</th>
-            <th>Scale</th>
-            <th>Price</th>
-            </thead>
-            <c:forEach items="${products}" var="p" varStatus="vs">
-                <tr>
+        <div class="container">
+            <h1>Product List ::</h1><hr>
+            <table id="example">
+                <thead>
                     
-                    <td><img src="model-images/${p.productCode}.jpg" width="120">"</td>
-                    <td>${vs.count}</td>
-                    <td>${p.productCode}</td>
-                    <td>${p.productName}</td>
-                    <td>${p.productLine}</td>
-                    <td>${p.productScale}</td>
-                    <td>${p.msrp}</td>
-                </tr>
-            </c:forEach>
-        </table>
+                <th>Image</th>
+                <th>No</th>
+                <th>Product Code</th>
+                <th>Product Name</th>
+                <th>Product Line</th>
+                <th>Scale</th>
+                <th>Price</th>
+                </thead>
+                <c:forEach items="${products}" var="p" varStatus="vs">
+                    <tr>
+
+                        <td><img src="model-images/${p.productCode}.jpg" width="120">"</td>
+                        <td>${vs.count}</td>
+                        <td>${p.productCode}</td>
+                        <td>${p.productName}</td>
+                        <td>${p.productLine}</td>
+                        <td>${p.productScale}</td>
+                        <td>${p.msrp}</td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('#example').DataTable();
+            });
+        </script>
     </body>
 </html>

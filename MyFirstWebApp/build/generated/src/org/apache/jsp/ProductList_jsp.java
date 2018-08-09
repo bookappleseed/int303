@@ -80,6 +80,11 @@ public final class ProductList_jsp extends org.apache.jasper.runtime.HttpJspBase
         return;
       out.write("\n");
       out.write("        </table>\n");
+      out.write("        <script>\n");
+      out.write("            $(document).ready(function() {\n");
+      out.write("    $('#example').DataTable();\n");
+      out.write("} );\n");
+      out.write("</script>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Prime Number Application::</h1>
+        <h1>Prime Number Application:: ${pn}::</h1>
          <a href="index.html">Home</a>
         <hr>
         <form action="PrimeNumber" method="post">

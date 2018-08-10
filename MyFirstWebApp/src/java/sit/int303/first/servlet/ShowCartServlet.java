@@ -37,11 +37,10 @@ public class ShowCartServlet extends HttpServlet {
              if (cart != null) {
                  session.setAttribute("cart", cart);
                  getServletContext().getRequestDispatcher("/ShowCart.jsp").forward(request, response);
-                
+                return; 
             }
-            
         }
-        
+        response.sendError(HttpServletResponse.SC_BAD_REQUEST,"Session TimeOut...Try..again");
         
     }
 

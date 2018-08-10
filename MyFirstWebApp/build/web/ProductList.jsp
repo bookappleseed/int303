@@ -26,15 +26,8 @@
     </head>
     <body>
         <div class="container">
-            <table class="table"
-                   <tr>       
-                    <td><h1>Product List ::</h1></td>
-                    <td>
-                        <a href="ShowCart">YourCart:(${cart.totalQuantity})</a>
-                    </td>
-                </tr>
-                <hr>
-            </table>
+            <jsp:include page="include/Header.jsp?ProductListing::"/>
+            
             <table id="example" class="table">
                 <thead>
 

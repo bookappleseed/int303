@@ -23,7 +23,7 @@
             </tr>
             <tr>
                 <td>Product Line</td>
-                <td>${product.productline}</td>
+               <td>${product.productline.productline}</td><!-- มัน return เป็น obj จึงต้องไป get productline อีกรอบ-->
             </tr>
             <tr>
                 <td>Scale</td>

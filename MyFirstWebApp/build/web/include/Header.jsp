@@ -19,7 +19,7 @@
             &nbsp;&nbsp;&nbsp;
             <c:choose>
                 <c:when test="${sessionScope.user!=null}">
-                    Hello ${sessionScope.user.name}
+                    Hello ${sessionScope.user.contactfirstname}
                 </c:when>
                 <c:otherwise>
                     Hello Guest

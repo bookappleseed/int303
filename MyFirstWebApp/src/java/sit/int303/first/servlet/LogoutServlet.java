@@ -8,18 +8,16 @@ package sit.int303.first.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author INT303
  */
-@WebServlet(name = "ChooseBackgroundServlet", urlPatterns = {"/ChooseBackground"})
-public class ChooseBackgroundServlet extends HttpServlet {
+public class LogoutServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,17 +30,14 @@ public class ChooseBackgroundServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String bgColor = request.getParameter("bgColor");
-        if (bgColor != null&&bgColor.trim().length()>0) {
-            Cookie ck=new Cookie("bgColor",bgColor);
-            ck.setMaxAge(8*24*60*60);
-            response.addCookie(ck);
-            response.sendRedirect("index.html");
+       HttpSession session = request.getSession(false);
+        if (session != null) {
+            session.invalidate();
+        
         }
-        else{
-        getServletContext().getRequestDispatcher("/ChooseBackground.jsp").forward(request, response);
-            }
-                }
+        getServletContext().getRequestDispatcher("/index.html").forward(request, response);
+    
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

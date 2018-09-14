@@ -28,7 +28,7 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td><input type="submit" name = "Login"/></td>
+                        <td><input type="submit" value = "Login"/></td>
                     </tr>
                     <tr>
                         <td colspan="2"><p style="color:red">${message}</p></td>

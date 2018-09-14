@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Login
-    Created on : Sep 7, 2018, 11:55:13 AM
+    Document   : Register
+    Created on : Sep 14, 2018, 10:54:13 AM
     Author     : INT303
 --%>
 
@@ -15,12 +15,12 @@
     </head>
     <body>
         <div class="container">
-            <jsp:include page="include/Header.jsp?title=Authentication::"/>
+            <jsp:include page="include/Header.jsp?title=Register::"/>
             <form action="Login" method="post">
                 <table class="table">
                     <tr>
-                        <td>User Name:</td>
-                        <td><input type="number" name = "userName" required/></td>
+                        <td>Email:</td>
+                        <td><input type="text" name = "email" required/></td>
                     </tr>
                     <tr>
                         <td>Password:</td>
@@ -28,7 +28,7 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td><input type="submit" value = "Login"/></td>
+                        <td><input type="submit" value = "Register"/></td>
                     </tr>
                     <tr>
                         <td colspan="2"><p style="color:red">${message}</p></td>
